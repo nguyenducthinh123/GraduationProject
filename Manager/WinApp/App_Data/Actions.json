@@ -1,0 +1,52 @@
+﻿{
+  "#": {
+    "home": "Home",
+    "broker": "Master server",
+    "server": "Servers",
+    "account": "Accounts",
+    "device": "Devices",
+    "test": "Test",
+    "test/account/login": "Login",
+    "test/account/logout": "Logout",
+    "test/account/add": "Create User",
+    "test/account/device": "Create Device",
+    "test/device/connect": "Connect",
+    "test/device/status": "Status",
+    "test/device/list": "List",
+    "test/log/detail": "Details",
+    "test/log/summary": "Summary",
+    ".": ""
+  },
+  "actors": {
+    "admin": {
+      "home": {
+        "childs": [
+          {
+            "text": "Broker",
+            "refs": [ "broker" ]
+          },
+          {
+            "text": "Manager",
+            "refs": [ "server", "account", "device" ]
+          }
+        ]
+      },
+      "test": {
+        "childs": [
+          {
+            "text": "User",
+            "refs": [ "/account/login", "/account/logout", "/account/add", "/account/device" ]
+          },
+          {
+            "text": "Device",
+            "refs": [ "/device/connect", "/device/status", "/device/list" ]
+          },
+          {
+            "text": "Log",
+            "refs": [ "/log/detail", "/log/summary" ]
+          }
+        ]
+      }
+    }
+  }
+}
